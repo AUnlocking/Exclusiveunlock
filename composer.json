@@ -1,4 +1,5 @@
-"require": {
-    ...
-    "codeigniter4/framework": "4.4.8"
-},
+{
+    "require": {
+        "tomatophp/filament-saas-panel": "^1.0"
+    }
+}

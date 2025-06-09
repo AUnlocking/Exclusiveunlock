@@ -1,0 +1,77 @@
+{
+    "name": "tomatophp/filament-types",
+    "type": "library",
+    "description": "Manage any type on your app in Database with easy to use Resource for FilamentPHP",
+    "keywords": [
+        "php",
+        "laravel",
+        "types",
+        "database",
+        "resource",
+        "manager",
+        "filamentphp",
+        "filament-plugin"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TomatoPHP\\FilamentTypes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TomatoPHP\\FilamentTypes\\Tests\\": "tests/src",
+            "TomatoPHP\\FilamentTypes\\Tests\\Database\\Factories\\": "tests/database/factories"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TomatoPHP\\FilamentTypes\\FilamentTypesServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "testbench": "vendor/bin/testbench package:discover --ansi",
+        "db": "vendor/bin/testbench package:create-sqlite-db && vendor/bin/testbench migrate",
+        "analyse": "vendor/bin/phpstan analyse src tests",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "authors": [
+        {
+            "name": "Fady Mondy",
+            "email": "info@3x1.io"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "tomatophp/console-helpers": "^1.1",
+        "filament/filament": "^3.3",
+        "filament/spatie-laravel-media-library-plugin": "^3.3",
+        "filament/spatie-laravel-translatable-plugin": "^3.3",
+        "tomatophp/filament-icons": "^1.1",
+        "tomatophp/filament-translation-component": "^v1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.21",
+        "livewire/livewire": "^2.10|^3.0",
+        "nunomaduro/larastan": "^3.1",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1",
+        "pestphp/pest-plugin-livewire": "^3.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0"
+    },
+    "version": "2.0.4"
+}

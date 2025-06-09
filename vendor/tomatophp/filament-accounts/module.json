@@ -1,0 +1,29 @@
+{
+    "name": "FilamentAccounts",
+    "alias": "filament-accounts",
+    "description": {
+        "ar": "قم بادارة جميع العملاء والحسابات الخاصة بالنظام من مكان واحد",
+        "en": "Manage your multi accounts inside your app using 1 table with multi auth and a lot of integrations",
+        "gr": "Manage your multi accounts inside your app using 1 table with multi auth and a lot of integrations",
+        "sp": "Manage your multi accounts inside your app using 1 table with multi auth and a lot of integrations"
+    },
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "TomatoPHP\\FilamentAccounts\\FilamentAccountsServiceProvider"
+    ],
+    "files": [],
+    "title": {
+        "ar": "الحسابات",
+        "en": "Accounts Builder",
+        "gr": "Accounts Builder",
+        "sp": "Accounts Builder"
+    },
+    "color": "#007dff",
+    "icon": "heroicon-c-user-circle",
+    "placeholder": "https://raw.githubusercontent.com/tomatophp/filament-accounts/master/arts/3x1io-tomato-accounts.jpg",
+    "type": "plugin",
+    "version": "v2.3.0",
+    "github" : "https://github.com/tomatophp/filament-accounts",
+    "docs" : "https://github.com/tomatophp/filament-accounts"
+}
