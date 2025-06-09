@@ -1,0 +1,4 @@
+"require": {
+    ...
+    "codeigniter4/framework": "4.4.8"
+},

@@ -1,0 +1,116 @@
+table td.filename .thumbnail {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	/*margin-left: 8px;
+	margin-top: 9px;*/
+	cursor: pointer;
+	float: left;
+	position: absolute;
+	z-index: 4;
+}
+
+/* File checkboxes */
+html:not(.ie8) #fileList tr td.filename > .selectCheckBox + label:before {
+	opacity: 0;
+	position: absolute;
+	bottom: 4px;
+	right: 0;
+	z-index: 10;
+}
+
+/* Show checkbox when hovering, checked, or selected */
+html.ie8 #fileList tr td.filename > .selectCheckBox:checked, html.ie8 #fileList tr.selected td.filename > .selectCheckBox, html.ie8 #fileList tr:focus td.filename > .selectCheckBox, html.ie8 #fileList tr:hover td.filename > .selectCheckBox, html:not(.ie8) #fileList tr td.filename > .selectCheckBox:checked + label:before, html:not(.ie8) #fileList tr.selected td.filename > .selectCheckBox + label:before, html:not(.ie8) #fileList tr:focus td.filename > .selectCheckBox + label:before, html:not(.ie8) #fileList tr:hover td.filename > .selectCheckBox + label:before {
+	opacity: 1;
+}
+
+
+/* Use label to have bigger clickable size for checkbox */
+#fileList tr td.filename > .selectCheckBox + label, .select-all + label {
+	background-position: 30px 30px;
+	height: 50px;
+	position: absolute;
+	width: 50px;
+	z-index: 5;
+}
+
+
+/* INPUTS */
+input[type="checkbox"].checkbox {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+input[type="checkbox"].checkbox + label:before {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	background: url('../images/actions/checkbox.svg') left top no-repeat;
+	opacity: 0.7;
+}
+
+input[type="checkbox"].checkbox:disabled +label:before {
+	opacity: .6;
+}
+
+input[type="checkbox"].checkbox.u-left +label:before {
+	float: left;
+}
+
+input[type="checkbox"].checkbox.u-hidden + label:before {
+	display: none;
+}
+
+input[type="checkbox"].checkbox:checked + label:before {
+	background-image: url('../images/actions/checkbox-checked.svg');
+}
+
+input[type="checkbox"].checkbox:indeterminate + label:before {
+	background-image: url('../images/actions/checkbox-mixed.svg');
+}
+
+input[type="checkbox"].checkbox:disabled + label:before {
+	background-image: url('../images/actions/checkbox-disabled.svg');
+}
+
+input[type="checkbox"].checkbox:checked:disabled + label:before {
+	background-image: url('../images/actions/checkbox-checked-disabled.svg');
+}
+
+input[type="checkbox"].checkbox:indeterminate:disabled + label:before {
+	background-image: url('../images/actions/checkbox-mixed-disabled.svg');
+}
+
+input[type="checkbox"].checkbox--white + label:before {
+	background-image: url('../images/actions/checkbox-white.svg');
+}
+
+input[type="checkbox"].checkbox--white:checked + label:before {
+	background-image: url('../images/actions/checkbox-checked-white.svg');
+}
+
+input[type="checkbox"].checkbox--white:indeterminate + label:before {
+	background-image: url('../images/actions/checkbox-mixed-white.svg');
+}
+
+input[type="checkbox"].checkbox--white:disabled + label:before {
+	background-image: url('../images/actions/checkbox-disabled-white.svg');
+}
+
+input[type="checkbox"].checkbox--white:checked:disabled + label:before {
+	background-image: url('../images/actions/checkbox-checked-disabled.svg');
+}
+
+input[type="checkbox"].checkbox--white:indeterminate:disabled + label:before {
+	background-image: url('../images/actions/checkbox-mixed-disabled.svg');
+}
+
+input[type="checkbox"].checkbox:hover+label:before, input[type="checkbox"]:focus+label:before {
+	color: #111 !important;
+}
